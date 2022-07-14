@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Deyguerman",
   "license": "ISC",
   "devDependencies": {
-    "@vercel/node": "^2.4.3"
+    "@vercel/node": "^2.4.3",
+    "jest": "^28.1.3"
   },
   "dependencies": {}
 }

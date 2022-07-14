@@ -34,9 +34,10 @@ function getDistanceBetweenPoints(lat1, lng1, lat2, lng2, unit) {
     }
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     const { latitude, longitude, distance, unit = 'm' } = req.query;
 
     const stations = bikeStations.filter(item => getDistanceBetweenPoints(latitude, longitude, item.latitude, item.longitude, unit) <= distance && item.status === 'IN_SERVICE')
+
     return res.status(200).json(stations);
 }
